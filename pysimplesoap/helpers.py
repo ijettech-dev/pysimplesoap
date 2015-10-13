@@ -444,10 +444,8 @@ def preprocess_schema(schema, imported_schemas, elements, xsd_uri, dialect,
 
 # simplexml utilities:
 
-try:
-    _strptime = datetime.datetime.strptime
-except AttributeError:  # python2.4
-    _strptime = lambda s, fmt: datetime.datetime(*(time.strptime(s, fmt)[:6]))
+
+_strptime = datetime.datetime.strptime
 
 
 # Functions to serialize/deserialize special immutable types:
