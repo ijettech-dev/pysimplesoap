@@ -1,18 +1,14 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 import os
 import subprocess
 import sys
 import warnings
 
-try:
-    import py2exe
-    from nsis import build_installer
-except:
-    build_installer = None
-
 from pysimplesoap import __version__, __author__, __author_email__, __license__
+
+build_installer = None
 
 # convert the README and format in restructured text (only when registering)
 long_desc = ""
